@@ -19,7 +19,7 @@ if __name__ == "__main__":
     @bot.tree.command(name="open")
     @app_commands.describe(pid="PID")
     @app_commands.describe(input="input")
-    async def open(interaction: discord.Interaction, pid: int, input: str):
+    async def cmd_open(interaction: discord.Interaction, pid: int, input: str):
         proc = process.open(pid)
         output, error = proc.communicate(input=input)
 
